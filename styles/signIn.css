@@ -1,0 +1,109 @@
+/* The signInModal (background) */
+.signInModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    margin: 0 auto;
+    min-height: 800px;
+    min-width: 800px;
+}
+  
+  /* signInModal Content/Box */
+.signInModal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height: 55%;
+}
+  
+  /* The Close Button */
+.signInModal .close {
+    /* Position it in the top right corner outside of the signInModal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .signInModal .close:hover,
+  .signInModal .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+
+.signInImgcontainer > img{
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.signInModalFirstContainer{
+    width: 100%;
+    height: 20%;
+
+}
+
+.signInModalFirstContainer > label{
+    display: block;
+    margin: 5px 5%;
+}
+
+
+/* Full-width input fields */
+.signInModalFirstContainer input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 0 5%;
+    display: inline-block;
+    border: 1px solid black;
+    background: white
+  
+  }
+  
+  /* Add a background color when the inputs get focus */
+  .signInModalFirstContainer input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .signInModalFirstContainer  button {
+    background-color: #8B00FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 5px 5%;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0.9;
+}
+  
+.signInModalFirstContainer  button:hover {
+    opacity:1;
+}
+  
+
+.signInModalFirstContainer .cancelbtn{
+    width: 20%;
+    margin: 5px 5%;
+    float: left;
+    background-color: orange;
+}
+
+.signInModalFirstContainer .psw{
+    margin: 25px 5% 0px 5%;
+    float: right;
+}
+
