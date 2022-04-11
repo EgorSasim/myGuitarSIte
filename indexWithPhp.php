@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php echo file_get_contents("./head.html")?>
+<link rel="stylesheet" href="/styles/entranceInfMain.css">
+<link rel="stylesheet" href="/styles/descriptionMain.css">
 <body>
 
     <!-- STICKY NAV -->
