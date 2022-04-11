@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Components/TopNav/styles.css">
+    <link rel="stylesheet" href="/styles/entranceInfMain.css">
+    <link rel="stylesheet" href="/styles/descriptionMain.css">
+
+    <!-- MENUS -->
+    <link rel="stylesheet" href="/styles/overlayMenu.css">
+
+    <!-- SIGN UP -->
+    <link rel="stylesheet" href="/styles/signUp.css">
+
+    <!-- SIGN IN -->
+    <link rel="stylesheet" href="/styles/signIn.css">
+    {{Styles}}
+    {{JSmodules}}
+</head>
+
+<body>
+    <!-- STICKY NAV -->
+
+    <div class="stickynav" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+    </div>
+    <!-- TOP NAVIGATION -->
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="forms/galery.html">Galery</a>
+        <a href="#tutors">Tutors</a>
+        <a href="#ownProj">Own proj</a>
+        <a href="#news">News</a>
+        <a href="#aboutUs">About Us</a>
+        <a href="#signIn" onclick="document.getElementById('signInForm').style.display='block'">Sign In</a>
+        <a href="#signUp" onclick="document.getElementById('signUpForm').style.display='block'">Sign Up</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="Container">
+        {{Content}}
+    </div>
+
+    <div id="signInForm" class="signInModal">
+        <span onclick="document.getElementById('signInForm').style.display='none'" class="close"
+            title="Close signInModal">&times;</span>
+
+        <!-- signInModal Content -->
+        <form class="signInModal-content animate" action="/action_page.php">
+            <div class="signInImgcontainer">
+                <img src="/assets/imgs/signIn/personIco.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="signInModalFirstContainer">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <button type="button" onclick="document.getElementById('signInForm').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <!-- OVERLAY MENU -->
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="forms/galery.html">Galery</a>
+            <a href="#">Tutors</a>
+            <a href="#">Own proj</a>
+            <a href="#">News</a>
+            <a href="#">About Us</a>
+
+        </div>
+
+    </div>
+
+    <script src="/scripts/overlayMenu.js"></script>
+    <script src="/scripts/signIn.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
