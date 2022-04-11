@@ -1,0 +1,16 @@
+Структура проекта
+
+Components/
+-Galery/
+--Scripts
+--Src
+---Image.png
+---...
+--styles/ или просто style.css
+--galery.html
+-...
+-Pages/
+--Main/
+--Products/
+--...
+index.html
