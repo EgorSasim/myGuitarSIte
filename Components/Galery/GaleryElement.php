@@ -1,4 +1,4 @@
-<?php namespace base;
+<?php
 class GaleryElement
 {
     private $name;

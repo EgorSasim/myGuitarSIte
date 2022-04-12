@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-body{
-    width: 80%;
-    margin: 20px auto 0px auto;
-    /* background-color: black; */
-}
-
 .description{
     width: 100%;
     background-color: black;

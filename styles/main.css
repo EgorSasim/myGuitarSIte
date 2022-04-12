@@ -2,11 +2,23 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
+    padding: 0px;
     width: 80%;
     margin: 20px auto 0px auto;
+    background-color: white;    
+} */
+
+body{
+    margin: 0px;
+    font-family: "Open Sans",sans-serif;
+    background: #000909;;
+}
+
+.container{
+    width: 80%;
     background-color: black;
-    
+    margin: 0px auto 0px auto;  
 }
 
 
