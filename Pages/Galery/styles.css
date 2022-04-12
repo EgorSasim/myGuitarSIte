@@ -75,10 +75,26 @@
     margin: 4px;
   }
 
+
   .gridItem > img{
       margin: 4px auto 4px auto;
   }
 
+    .gridItem > div{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        height: 20%;
+        opacity: rgba(0, 0, 0, 0.6);
+    }
+
+    .gridItem > div > span{
+        text-align: center;
+        color: white;
+        font-size: 12px;
+
+    }
 
   @media screen and (max-width: 870px) {
     .grid-container{

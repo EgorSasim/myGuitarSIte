@@ -13,7 +13,9 @@ class GaleryElement
         $str = <<<END
             <div class="gridItem">
                 <img src="{$this->path}">
-
+                <div>
+                    <span>{{Guitar name}}</sapn>
+                </div>
             </div>
 END;
         return $str;
