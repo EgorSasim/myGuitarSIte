@@ -2,9 +2,20 @@
 class GaleryElement
 {
     private $name;
-    function __construct($name) { $this->name = $name; }
+    private $price;
+    private $path;
+
+    function __construct($name, $price, $path) {
+        $this->name = $name;
+        $this->path = $path;
+    }
     function print_name(){
-        $str = "<div class=\"gridItem\">{$this->name}</div>";
+        $str = <<<END
+            <div class="gridItem">
+                <img src="{$this->path}">
+
+            </div>
+END;
         return $str;
     }
 }

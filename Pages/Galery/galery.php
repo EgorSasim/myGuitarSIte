@@ -26,9 +26,12 @@ $filter = str_replace('{{Values}}', join($list), $filter);
 
 $galery = file_get_contents("../../Components/Galery/galery.html");
 $list = array(
-        (new GaleryElement("jopa"))->print_name(),
-        (new GaleryElement("jopa"))->print_name(),
-        (new GaleryElement("sds"))->print_name(),         
+        (new GaleryElement("jopa","","/assets/imgs/guitars/374850.jpg"))->print_name(),
+        (new GaleryElement("jopa","","/assets/imgs/guitars/374857.jpg"))->print_name(),
+        (new GaleryElement("sds","","/assets/imgs/guitars/374853.jpg"))->print_name(), 
+        (new GaleryElement("sds","","/assets/imgs/guitars/374850.jpg"))->print_name(),
+        (new GaleryElement("sds","","/assets/imgs/guitars/374853.jpg"))->print_name(),
+        (new GaleryElement("sds","","/assets/imgs/guitars/374857.jpg"))->print_name(),        
 );
 $galery = str_replace('{{Values}}', join($list), $galery);
 

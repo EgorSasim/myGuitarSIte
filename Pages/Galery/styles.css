@@ -60,18 +60,23 @@
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-gap: 0px;
-    background-color: #fff;
+    background-color: black;
     
     
   }
   
   .gridItem {
     border: 1px solid black;
-    color: black;
-    border-radius: 5px;
+    color: white;
+    background: rgb(0, 18, 24);
+    border-radius: 16px;
     padding: 10%;
     font-size: 16px;
     margin: 4px;
+  }
+
+  .gridItem > img{
+      margin: 4px auto 4px auto;
   }
 
 
