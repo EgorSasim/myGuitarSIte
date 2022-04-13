@@ -1,0 +1,4 @@
+*.md
+guide.txt
+.docker*
+[Dd]ocker*
