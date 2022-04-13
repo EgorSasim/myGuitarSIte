@@ -1,17 +1,16 @@
 <?php
-$styles = <<<END
+$styles = '<link rel="stylesheet" href="/Pages/ProductView/styles.css">';
 
-END;
 $id = $_GET['id'];
-if($id != 374850 or $id != 37453 or $id != 374857){
-    header("Location: /Pages/ErrorPage/404.php");
+if(!in_array($id, array(374850, 374853, 374857))){
+    header("Location: /Pages/ErrorPage/404.php".$id);
     exit;
 }
 
 $content = file_get_contents("content.html");
 $content = str_replace('{{id}}', $id, $content);
 
-$baseTemplate = file_get_contents("../../Templates/main_template.html");
+$baseTemplate = file_get_contents($_SERVER['DOCUMENT_ROOT']."/Templates/main_template.html");
 $baseTemplate = str_replace('{{JSmodules}}', '', $baseTemplate);
 $baseTemplate = str_replace('{{Styles}}', $styles, $baseTemplate);
 $baseTemplate = str_replace('{{Content}}', $content, $baseTemplate);
