@@ -68,6 +68,8 @@
   .gridItem {
     border: 1px solid black;
     color: white;
+    display: flex;
+    justify-content: center;
     background: rgb(0, 18, 24);
     border-radius: 16px;
     padding: 10%;
@@ -99,8 +101,10 @@
 
     }
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 1180) {
     .grid-container{
         grid-template-columns: 33% 33% 33%;
     }
   }
+
+  

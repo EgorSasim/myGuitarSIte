@@ -5,7 +5,7 @@ include "../../Components/Galery/galeryElement.php";
 $styles = <<<END
     <link rel="stylesheet" href="../../Components/SearchUL/coolSearch.css">
     <link rel="stylesheet" href="../../Components/Filter/filterNav.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../Components/Galery/styles.css">
 END;
 
 $jsModules = <<<END
