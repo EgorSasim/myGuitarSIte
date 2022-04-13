@@ -1,24 +1,22 @@
-.description{
+.description {
     width: 100%;
     background-color: black;
-    color: white ;
+    color: white;
     font-size: 16px;
-    
     padding: 5px;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.description > h1 {
+.description>h1 {
     text-align: center;
 }
 
-
-.galery{
+.galery {
     width: 100%;
 }
 
-.control-part{
+.control-part {
     width: 100%;
     height: 35px;
     margin: 0 auto;
@@ -30,14 +28,14 @@
     padding: 7px 10px 5px 10px;
 }
 
-.filters{
+.filters {
     float: left;
     font-size: 20px;
     margin-left: 2%;
     cursor: pointer;
 }
 
-.controlArrows{
+.controlArrows {
     float: right;
     display: flex;
     margin-right: 2%;
@@ -45,15 +43,14 @@
     font-weight: bold;
 }
 
-.leftArrow{
+.leftArrow {
     margin-right: 10px;
     cursor: pointer;
 }
 
-.rightArrow{
+.rightArrow {
     cursor: pointer;
 }
-
 
 .grid-container {
     width: 100%;
@@ -61,11 +58,9 @@
     grid-template-columns: 25% 25% 25% 25%;
     grid-gap: 0px;
     background-color: black;
-    
-    
-  }
-  
-  .gridItem {
+}
+
+.gridItem {
     border: 1px solid black;
     color: white;
     display: flex;
@@ -75,8 +70,27 @@
     padding: 10%;
     font-size: 16px;
     margin: 4px;
-  }
+}
 
+.gridItemContent {
+    width: 100%;
+}
+
+.gridItemContent>img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -20px;
+}
+
+.gridItemContent>div {
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+
+/* 
 
   .gridItem > img{
       margin: 0 auto;
@@ -99,12 +113,10 @@
         color: white;
         font-size: 16px;
 
-    }
+    } */
 
-  @media screen and (max-width: 1180) {
-    .grid-container{
+@media screen and (max-width: 800px) {
+    .grid-container {
         grid-template-columns: 33% 33% 33%;
     }
-  }
-
-  
+}
