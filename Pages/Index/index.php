@@ -2,6 +2,7 @@
 $styles = '<link rel="stylesheet" href="/styles/main.css">';
 
 $baseTemplate = file_get_contents("../../Templates/main_template.html");
+$baseTemplate = str_replace($_SERVER['SCRIPT_NAME'].'">', $_SERVER['SCRIPT_NAME'].'" class="active">', $baseTemplate);
 
 $baseTemplate = str_replace('{{JSmodules}}', '', $baseTemplate);
 $baseTemplate = str_replace('{{Styles}}', $styles, $baseTemplate);

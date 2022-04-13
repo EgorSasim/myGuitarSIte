@@ -77,22 +77,25 @@
 
 
   .gridItem > img{
-      margin: 4px auto 4px auto;
+      margin: 0 auto;
   }
 
-    .gridItem > div{
+    .guitar-small-inf{
         position: absolute;
         bottom: 0;
         width: 100%;
-        background-color: black;
-        height: 20%;
-        opacity: rgba(0, 0, 0, 0.6);
+        
     }
 
-    .gridItem > div > span{
+    .guitar-small-inf >div{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .guitar-small-inf > span{
         text-align: center;
         color: white;
-        font-size: 12px;
+        font-size: 16px;
 
     }
 

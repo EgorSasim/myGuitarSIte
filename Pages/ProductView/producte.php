@@ -3,8 +3,9 @@ $styles = <<<END
 
 END;
 $id = $_GET['id'];
-if($id != "374850" || $id != "374853" || $id != "374857"){
-    echo "ssssssss";
+if($id != 374850 or $id != 37453 or $id != 374857){
+    header("Location: /Pages/ErrorPage/404.php");
+    exit;
 }
 
 $content = file_get_contents("content.html");
