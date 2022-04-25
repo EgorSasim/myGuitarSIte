@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  php:
+    container_name: main
+    image: php_site_core
+    build: .
+    ports:
+      - "8080:80"
+    links:
+      - "db:database"
+
+  db:
+    container_name: database_pg
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12qwasZX
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    container_name: database_admin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5051:80"
+    links:
+      - "db:database"
