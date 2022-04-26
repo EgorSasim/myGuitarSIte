@@ -1,126 +1,144 @@
-.description {
-    width: 100%;
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 5px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.description>h1 {
-    text-align: center;
-}
-
-.galery {
-    width: 100%;
-}
-
-.control-part {
-    width: 100%;
-    height: 35px;
-    margin: 0 auto;
-    border: 1px solid black;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    background-color: black;
-    color: white;
-    padding: 7px 10px 5px 10px;
-}
-
-.filters {
-    float: left;
-    font-size: 20px;
-    margin-left: 2%;
-    cursor: pointer;
-}
-
-.controlArrows {
-    float: right;
-    display: flex;
-    margin-right: 2%;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.leftArrow {
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.rightArrow {
-    cursor: pointer;
-}
-
-.grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 0px;
-    background-color: black;
-}
-
-.gridItem {
-    border: 1px solid black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    background: rgb(0, 18, 24);
-    border-radius: 16px;
-    padding: 10px 10% 30px 10%;
-    font-size: 16px;
-    margin: 4px;
-}
-
-.gridItemContent {
-    width: 100%;
-}
-
-.gridItemContent>img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: -20px;
-}
-
-.gridItemContent>div {
-    width: 100%;
-    background: white;
-    color: black;
-    text-align: center;
-}
-
-a {
+/* The side navigation menu */
+.filterNav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the filterNav */
+  }
+  
+  /* The navigation menu links */
+  .filterNav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    color: black;
-}
-
-/* 
-
-  .gridItem > img{
-      margin: 0 auto;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .filterNav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .filterNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+    
+  /* On smaller screens, where height is less than 450px, change the style of the filterNav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .filterNav {padding-top: 15px;}
+    .filterNav a {font-size: 18px;}
   }
 
-    .guitar-small-inf{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        
-    }
 
-    .guitar-small-inf >div{
-        width: 100%;
-        background: rgba(0, 0, 0, 0.6);
-    }
 
-    .guitar-small-inf > span{
-        text-align: center;
-        color: white;
-        font-size: 16px;
+/* GUITARS PART */
+.guitarType{
+  margin: 0px auto;
+  display: block;
+  width: 80%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
 
-    } */
+h3{
+  color: whitesmoke;
+  display: block;
+  margin-left: 10%;
+}
 
-@media screen and (max-width: 800px) {
-    .grid-container {
-        grid-template-columns: 33% 33% 33%;
-    }
+
+/* CLASSIC GUITAR */
+.classicGuitarScpecifications{
+  display: none;
+}
+
+.classicGuitarScpecifications > div{
+  color: white;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.classicGuitarScpecifications > div > span {
+  width: 30%;
+  display: block;
+  padding-left: 10%;
+}
+
+.classicGuitarScpecifications > div > input{
+  width: 60%;
+  display: block;
+  padding-right: 10% ;
+}
+
+/* ELECTRIC GUITAR */
+
+.electronicGuitarScpecifications{
+  display: none;
+}
+
+
+.electronicGuitarScpecifications > div{
+  color: white;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.electronicGuitarScpecifications > div > span {
+  width: 30%;
+  display: block;
+  padding-left: 10%;
+}
+
+.electronicGuitarScpecifications > div > input{
+  width: 60%;
+  display: block;
+  padding-right: 10% ;
+}
+/* ACOUSTIC GUITAR */
+
+.acousticGuitarScpecifications{
+  display: none  ;
+}
+
+.acousticGuitarScpecifications > div{
+  color: white;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.acousticGuitarScpecifications > div > span {
+  width: 30%;
+  display: block;
+  padding-left: 10%;
+}
+
+.acousticGuitarScpecifications > div > input{
+  width: 60%;
+  display: block;
+  padding-right: 10% ;
+}
+
+/* FIND BUTTON */
+
+.findhAppropriateGuitar{
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  cursor: pointer;
 }
