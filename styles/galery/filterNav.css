@@ -41,3 +41,81 @@
     .filterNav {padding-top: 15px;}
     .filterNav a {font-size: 18px;}
   }
+
+
+
+/* GUITARS PART */
+.guitarType{
+  margin: 0px auto;
+  display: block;
+  width: 80%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+h3{
+  color: whitesmoke;
+  display: block;
+  margin-left: 10%;
+}
+
+
+/* CLASSIC GUITAR */
+.classicGuitarScpecifications{
+  display: block  ;
+}
+
+.classicGuitarScpecifications > div{
+  color: white;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.classicGuitarScpecifications > div > span {
+  width: 30%;
+  display: block;
+  padding-left: 10%;
+}
+
+.classicGuitarScpecifications > div > input{
+  width: 60%;
+  display: block;
+  padding-right: 10% ;
+}
+
+/* ELECTRIC GUITAR */
+
+.electronicGuitarScpecifications{
+  display: block  ;
+}
+
+
+.electronicGuitarScpecifications > div{
+  color: white;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.electronicGuitarScpecifications > div > span {
+  width: 30%;
+  display: block;
+  padding-left: 10%;
+}
+
+.electronicGuitarScpecifications > div > input{
+  width: 60%;
+  display: block;
+  padding-right: 10% ;
+}
+/* ACOUSTIC GUITAR */
+
+/* FIND BUTTON */
+
+.findhAppropriateGuitar{
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  cursor: pointer;
+}
