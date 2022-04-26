@@ -62,7 +62,7 @@ h3{
 
 /* CLASSIC GUITAR */
 .classicGuitarScpecifications{
-  display: block  ;
+  display: none;
 }
 
 .classicGuitarScpecifications > div{
@@ -87,7 +87,7 @@ h3{
 /* ELECTRIC GUITAR */
 
 .electronicGuitarScpecifications{
-  display: block  ;
+  display: none;
 }
 
 
@@ -110,6 +110,29 @@ h3{
   padding-right: 10% ;
 }
 /* ACOUSTIC GUITAR */
+
+.acousticGuitarScpecifications{
+  display: none  ;
+}
+
+.acousticGuitarScpecifications > div{
+  color: white;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.acousticGuitarScpecifications > div > span {
+  width: 30%;
+  display: block;
+  padding-left: 10%;
+}
+
+.acousticGuitarScpecifications > div > input{
+  width: 60%;
+  display: block;
+  padding-right: 10% ;
+}
 
 /* FIND BUTTON */
 
