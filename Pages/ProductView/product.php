@@ -1,5 +1,9 @@
 <?php
-$styles = '<link rel="stylesheet" href="/Pages/ProductView/styles.css">';
+
+$styles = <<<END
+    <link rel="stylesheet" href="/Pages/ProductView/styles.css">
+    <link rel="stylesheet" href="/Components/Comment/comment.css">
+END;
 $js_modules = '<script src="/Pages/ProductView/scripts.js"></script>';
 
 $id = $_GET['id'];
@@ -33,4 +37,3 @@ $baseTemplate = str_replace('{{Styles}}', $styles, $baseTemplate);
 $baseTemplate = str_replace('{{Content}}', $content, $baseTemplate);
 
 echo $baseTemplate;
-?>

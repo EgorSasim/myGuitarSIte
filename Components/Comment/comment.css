@@ -1,0 +1,30 @@
+.comment {
+    border-color: blueviolet;
+    border-style: solid;
+    color: white;
+    padding: 4px;
+    margin: 8px;
+}
+
+.comment div {
+    display: inline-block;
+}
+
+.about-comment {
+    font-weight: bold;
+    font-size: large;
+}
+
+.product-comment {
+    font-weight: lighter;
+    font-size: xx-small;
+}
+
+.text-comment {
+    font-size: medium;
+}
+
+.comment>div>img {
+    width: 200px;
+    height: 200px;
+}
