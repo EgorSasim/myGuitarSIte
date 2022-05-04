@@ -2,12 +2,24 @@
     border-color: blueviolet;
     border-style: solid;
     color: white;
-    padding: 4px;
     margin: 8px;
+    display: flex;
 }
 
-.comment div {
+.comment-post{
+    width: 100%;
+    height: 100%;
+}
+
+.comment>div {
+    margin: 4px;
     display: inline-block;
+}
+
+.header-comment{
+    display: inline-block;
+    font-weight: lighter;
+    font-size: small;
 }
 
 .about-comment {
@@ -15,16 +27,21 @@
     font-size: large;
 }
 
-.product-comment {
+.time-comment{
+    text-align: right;
+    font-size: x-small;
     font-weight: lighter;
-    font-size: xx-small;
 }
 
+.product-comment { 
+}  
+
 .text-comment {
-    font-size: medium;
+    font-size: small;
 }
 
 .comment>div>img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover
 }
