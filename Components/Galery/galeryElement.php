@@ -34,17 +34,5 @@ class GuitarJson{
 
         $this->picture = sprintf(self::$path, $this->id);
     }
-
-    public function jsonSerialize()
-    {
-        $arr = array(
-            'name' => $this->name,
-            'price' => $this->price,
-            'id' => $this->id,
-            'path' => $this->picture
-        );
-
-        return $arr;
-    }
 }
 ?>

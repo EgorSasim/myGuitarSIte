@@ -28,3 +28,8 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+function getComments(id){
+  json = await fetch(`/API/getComments.php?id=${id}`);
+  console.log(json);  
+}
