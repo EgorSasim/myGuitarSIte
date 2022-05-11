@@ -48,27 +48,33 @@
             <!-- Thumbnail images -->
             <div class="row">
                 <div class="column">
-                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/first.jpg" style="width:100%" onclick="currentSlide(1)" alt="{{Guitar_name}}">
+                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/first.jpg" style="width:100%"
+                        onclick="currentSlide(1)" alt="{{Guitar_name}}">
                 </div>
 
                 <div class="column">
-                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/second.jpg" style="width:100%" onclick="currentSlide(2)" alt="{{Guitar_name}}">
+                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/second.jpg" style="width:100%"
+                        onclick="currentSlide(2)" alt="{{Guitar_name}}">
                 </div>
 
                 <div class="column">
-                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/third.jpg" style="width:100%" onclick="currentSlide(3)" alt="{{Guitar_name}}">
+                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/third.jpg" style="width:100%"
+                        onclick="currentSlide(3)" alt="{{Guitar_name}}">
                 </div>
 
                 <div class="column">
-                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/fourth.jpg" style="width:100%" onclick="currentSlide(4)" alt="{{Guitar_name}}">
+                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/fourth.jpg" style="width:100%"
+                        onclick="currentSlide(4)" alt="{{Guitar_name}}">
                 </div>
 
                 <div class="column">
-                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/fifth.jpg" style="width:100%" onclick="currentSlide(5)" alt="{{Guitar_name}}">
+                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/fifth.jpg" style="width:100%"
+                        onclick="currentSlide(5)" alt="{{Guitar_name}}">
                 </div>
 
                 <div class="column">
-                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/sixth.jpg" style="width:100%" onclick="currentSlide(6)" alt="{{Guitar_name}}">
+                    <img class="demo cursor" src="/assets/imgs/sepGuitarTemplate/sixth.jpg" style="width:100%"
+                        onclick="currentSlide(6)" alt="{{Guitar_name}}">
                 </div>
             </div>
         </div>
@@ -91,35 +97,22 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    getComments(5);
-</script>
-
 <h1 style="margin: 40px 4px 4px 4px;">comments:</h1>
 <div class="comments-container">
-    <div class="comment">
-        <div>
-            <img src="/assets/imgs/guitars/374850.jpg">
-        </div>
-        <div class="comment-post">
-            <div class="about-comment header-comment">Норм</div>
-            <div class="product-comment header-comment">Cort G510</div>
-            <div class="time-comment header-comment">24.12.2020 7:35</div>
-            <div class="text-comment">THE GUITAR CHARACTERISTICS, TEY WILL BE DIFFERENT FOR AQUSTIC CLASSIC AND ELECTRONIC GUITARS, SO IT WILL BETTER TO CREATE A LIST WITH CHARACTERISTICS AND WHEN CREATE A PAGE CHECK THE CLASS OF GUITAR(ELECTRIC OR CLASSIC AND FILL CHARACTERISTICS
-                FROM THIS LIST
-            </div>
-        </div>
-    </div>
-    <div class="comment">
-        <div>
-            <img src="/assets/imgs/guitars/374850.jpg">
-        </div>
-        <div class="comment-post">
-            <div class="time-comment">24.12.2020 7:35</div>
-            <div class="about-comment header-comment">Норм</div>
-            <div class="product-comment header-comment">Cort G510</div>
-            <div class="text-comment">THE GUI
-            </div>
-        </div>
-    </div>
 </div>
+<form action="/API/createComment.php" method="post">
+    <input type="hidden" id="custId" name="product_id" value="{{product_id}}">
+    <ul>
+        <li>
+            <label for="about_box">About:</label>
+            <input type="text" id="about_box" name="about">
+        </li>
+        <li>
+            <label for="text_box">Text:</label>
+            <textarea id="text_box" name="text"></textarea>
+        </li>
+        <li class="button">
+            <button type="submit">Send your message</button>
+        </li>
+    </ul>
+</form>

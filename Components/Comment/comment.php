@@ -12,7 +12,7 @@ class CommentJson{
         $this->date = $date;
         $this->text = $text;
 
-        $this->picture = sprintf(self::$path, $this->avatar_id);
+        $this->picture = sprintf(self::$path, $avatar_id);
     }
 }
 ?>

@@ -36,4 +36,7 @@ $baseTemplate = str_replace('{{JSmodules}}', $js_modules, $baseTemplate);
 $baseTemplate = str_replace('{{Styles}}', $styles, $baseTemplate);
 $baseTemplate = str_replace('{{Content}}', $content, $baseTemplate);
 
+$baseTemplate = str_replace('{{product_id}}', $id, $baseTemplate);
+
 echo $baseTemplate;
+?>
