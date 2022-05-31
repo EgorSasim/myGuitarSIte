@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/Templates/Styles/main.css">
-    
+
     <link rel="stylesheet" href="/Templates/Styles/topNav.css">
     <link rel="stylesheet" href="/Templates/Styles/descriptionMain.css">
     <link rel="stylesheet" href="/Templates/Styles/entranceInfMain.css">
@@ -66,12 +66,6 @@
                 <label for="psw-repeat"><b>Repeat Password</b></label>
                 <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                </label>
-
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
                 <div class="clearfix">
                     <button type="button" onclick="document.getElementById('signUpForm').style.display='none'"
                         class="cancelbtn">Cancel</button>
@@ -86,7 +80,7 @@
             title="Close signInModal">&times;</span>
 
         <!-- signInModal Content -->
-        <form class="signInModal-content animate" action="/action_page.php">
+        <div class="signInModal-content animate" action="/action_page.php">
             <div class="signInImgcontainer">
                 <img src="/assets/imgs/signIn/personIco.jpg" alt="Avatar" class="avatar">
             </div>
@@ -98,16 +92,14 @@
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-
-                <button type="button" onclick="document.getElementById('signInForm').style.display='none'"
-                    class="cancelbtn">Cancel</button>
+                <div class="clearfix">
+                    <button type="submit" class="signup sbmtBtn">Login</button>
+                    <button type="button" onclick="document.getElementById('signInForm').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                </div>
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
-        </form>
+        </div>
     </div>
 
     <!-- OVERLAY MENU -->

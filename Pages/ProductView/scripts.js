@@ -42,15 +42,39 @@ async function getComments() {
   json = await json;
 
   let comments = document.getElementsByClassName("comments-container")[0];
+  comments.innerHTML = "";
 
   json.forEach(element => {
     var newDiv = document.createElement("div");
     newDiv.className = "comment";
-    newDiv.innerHTML = `<div><img src="${element["picture"]}"></div><div class="comment-post"><div class="time-comment">${element["date"]}</div><div class="about-comment">${element["about"]}</div><div class="text-comment">${element["text"]}</div></div>`;
+    newDiv.innerHTML = `<div><img src="${element["preview"]}"></div><div class="comment-post"><div class="time-comment">${element["date"]}</div><div class="about-comment">${element["about"]}</div><div class="text-comment">${element["text"]}</div></div>`;
     console.log(newDiv);
 
     comments.appendChild(newDiv);
   });
+}
+
+function getCommentData(id) {
+  var theme = document.getElementById('about_box');
+  var text = document.getElementById('text_box');
+  var commentForm = document.getElementsByClassName("comment-container")[0];
+
+  let ob =  {
+    "about"   : theme.value,
+    "text"    : text.value,
+    "preview" : "/assets/imgs/avatars/personIco.jpg",
+    "product_id"      : id
+  }
+
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "/API/createComment.php");
+
+  xhr.send(JSON.stringify(ob));
+  sleep(200);
+  //commentForm.reset()
+  //document.location.reload();
+  
 }
 
 getComments();

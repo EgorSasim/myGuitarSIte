@@ -87,6 +87,12 @@ body {
     display: none;
 }
 
+.mySlides>img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover
+}
+
 
 /* Add a pointer when hovering over the thumbnail images */
 
@@ -174,4 +180,50 @@ body {
 .active,
 .demo:hover {
     opacity: 1;
+}
+
+
+
+/* COMMMENT SENDING  */
+
+.comment-container {
+    width: 70%;
+    border: 5px solid blueviolet;
+    margin: 20px 0px 50px 8px;
+}
+
+#about_box {
+    display: block;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid blueviolet;
+    margin: 5px 0px 10px 20px;
+    font-size: 25px;
+    width: 96%;
+}
+
+
+#text_box {
+    display: block;
+    background: transparent;
+    color: blueviolet;
+    font-size: 18px;
+    margin: 10px 0px 10px 20px;
+    border: 1px solid blueviolet;
+    width: 96%;
+    height: 220px;
+    resize: none;
+}
+
+#send_comment_btn {
+    display: block;
+    background: blueviolet;
+    border: none;
+    border-radius: ;
+    font-size: 25px;
+    margin: 10px 0px 10px 20px;
+    width: 96%;
+    cursor: pointer;
 }

@@ -64,3 +64,11 @@ function isPartiallyVisible(el) {
 
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}

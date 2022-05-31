@@ -27,19 +27,22 @@ $list = array(
 $filter = str_replace('{{Values}}', join($list), $filter);
 
 $galery = file_get_contents($_SERVER['DOCUMENT_ROOT']."/Components/Galery/galery.html");
-$list = array(
-        (new GaleryElement("Guitar 1","","374850"))->print_name(),
-        (new GaleryElement("Guitar 2","","374857"))->print_name(),
-        (new GaleryElement("Guitar 3","","374853"))->print_name(), 
-        (new GaleryElement("Guitar 4","","374850"))->print_name(),
-        (new GaleryElement("Guitar 5","","374853"))->print_name(),
-        (new GaleryElement("Guitar 6","","374857"))->print_name(),        
-);
-$galery = str_replace('{{Values}}', join($list), $galery);
+
+$dbconn = pg_connect("host=database port=5432 dbname=postgres user=postgres password=12qwasZX")
+or die('Не удалось соединиться: ' . pg_last_error());
+
+$sql = "SELECT id, name, preview FROM products";
+
+$result = pg_query($dbconn, $sql);
+$arr = pg_fetch_all($result);
+
+for($i = 0; $i<count($arr); $i++){
+    $arr[$i] = "<div class=\"gridItem\"><a href=\"/Pages/ProductView/product.php?id=".$arr[$i]["id"]."\" class=\"gridItemContent\"><img src=".$arr[$i]["preview"]."><div><p>".$arr[$i]["name"]."</p></div></a></div>";
+}
+
+$galery = str_replace('{{Values}}', join($arr), $galery);
 
 $filterNav = file_get_contents($_SERVER['DOCUMENT_ROOT']."/Components/Filter/filterNav.html");
-
-
 
 $content = <<<END
 <div class="description">

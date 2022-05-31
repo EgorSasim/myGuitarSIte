@@ -1,0 +1,80 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.2 (Debian 14.2-1.pgdg110+1)
+-- Dumped by pg_dump version 14.2
+
+-- Started on 2022-05-30 13:59:31 UTC
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3327 (class 0 OID 16384)
+-- Dependencies: 209
+-- Data for Name: comments; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.comments (id, date, about, text, product_id, preview) FROM stdin;
+3	2022-05-30 04:01:26.079605	dsas	dsad sdas	1	/assets/imgs/avatars/personIco.jpg
+4	2022-05-30 10:41:46.955813	asdsa	https://www.bsuirsd.by Текст» — российский криминально-драматический психологический триллер режиссёра Клима Шипенко[4], https://www.bsuir.by/ экранизация романа-бестселлера «Текст» (2017) писателя Дмитрия Глуховского, который сам адаптировал свой роман в киносценарий[5]. Фильм рассказывает о бывшем заключённом Илье Горюнове, который мстит полицейскому Петру Хазину, подбросившему ему наркотики, и в результате получает доступ к его смартфону. Вместе с ним он получает доступ и к жизни http://bsuior.by/ героя, и на время становится для всех Хазиным, отправляя сообщения его начальству, родителям и девушке Нине, в которую влюбляется и сам. https://www.bsuiras.by/	2	/assets/imgs/avatars/personIco.jpg
+\.
+
+
+--
+-- TOC entry 3331 (class 0 OID 16413)
+-- Dependencies: 213
+-- Data for Name: images; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.images (product_id, image) FROM stdin;
+2	/assets/imgs/images/back-neck-500_500.png
+2	/assets/imgs/images/hardware-500_500.png
+\.
+
+
+--
+-- TOC entry 3330 (class 0 OID 16394)
+-- Dependencies: 212
+-- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.products (id, name, description, preview) FROM stdin;
+1	Guitar 1	Good guitar	/assets/imgs/guitars/374853.jpg
+2	Gibson Lespoule	The new Les Paul Standard returns to the classic design that made it relevant, played and loved -- shaping sound across generations and genres of music. It pays tribute to Gibson's Golden Era of innovation and brings authenticity back to life.	/assets/imgs/avatars/LPS619ITNH1_1.jpg.jpg
+\.
+
+
+--
+-- TOC entry 3339 (class 0 OID 0)
+-- Dependencies: 210
+-- Name: comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.comments_id_seq', 11, true);
+
+
+--
+-- TOC entry 3340 (class 0 OID 0)
+-- Dependencies: 211
+-- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.products_id_seq', 2, true);
+
+
+-- Completed on 2022-05-30 13:59:32 UTC
+
+--
+-- PostgreSQL database dump complete
+--
+
